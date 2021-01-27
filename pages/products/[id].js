@@ -1,6 +1,5 @@
 import React from 'react';
-import Layout from '../components/Layout/Layout';
-import Image from 'next/image';
+import Layout from '../../components/Layout/Layout';
 
 function products({ data, image }) {
 	const title = data.results[0].title;
@@ -11,23 +10,24 @@ function products({ data, image }) {
 	const item_width = data.results[0].item_width;
 	const item_length = data.results[0].item_length;
 	const url = data.results[0].url;
+	console.log(image);
 
 	return (
 		<Layout>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6'>
 				<div className='flex flex-col md:flex-row -mx-4'>
 					<div className='md:flex-1 px-4'>
-						{image.results.map((image, i) => {
+						{image.results.map((link, i) => {
 							return (
-								<Image
+								<img
+									key={i}
+									className='rounded-lg mb-4'
 									src={image.results[i].url_fullxfull}
-									alt=''
-									height={100}
-									width={100}
+									width='400px'
+									height='auto'
 								/>
 							);
 						})}
-						<div className='h-64 md:h-80 rounded-lg bg-gray-100 mb-4'></div>
 					</div>
 					<div className='md:flex-1 px-4'>
 						<h2 className='mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl'>
@@ -45,15 +45,35 @@ function products({ data, image }) {
 							</div>
 						</div>
 
-						<p className='text-gray-500'>{description}</p>
+						<div className='text-gray-500'>
+							<span className='text-xl font-bold'>Description: </span>{' '}
+							<p>{description}</p>
+						</div>
 
-						<p className='text-gray-500'>Materials: {materials}</p>
+						<div>
+							<span className='text-gray-500 text-xl font-bold'>
+								Materials:{' '}
+							</span>
+							<ul className='text-gray-500'>
+								{materials.map((mat, i) => {
+									return <li key={i}>{materials[i] + ' '}</li>;
+								})}
+							</ul>
+						</div>
 
-						<p className='text-gray-500'>Height: {item_width}</p>
+						<div>
+							<span className='text-gray-500 text-xl font-bold'>Length: </span>
+							<p className='text-gray-500'>{item_length}mm</p>
+						</div>
 
-						<p className='text-gray-500'>Length: {item_length}</p>
-
-						<p className='text-gray-500'>Weight: {item_weight}</p>
+						<div>
+							<span className='text-gray-500 text-xl font-bold'>Width: </span>
+							<p className='text-gray-500'>{item_width}mm</p>
+						</div>
+						<div>
+							<span className='text-gray-500 text-xl font-bold'>Weight: </span>
+							<p className='text-gray-500'>{item_weight}grams</p>
+						</div>
 
 						<div className='flex py-4 space-x-4'>
 							<div className='relative'>
@@ -67,21 +87,6 @@ function products({ data, image }) {
 									<option>4</option>
 									<option>5</option>
 								</select>
-
-								<svg
-									className='w-5 h-5 text-gray-400 absolute right-0 bottom-0 mb-2 mr-2'
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 24 24'
-									stroke='currentColor'
-								>
-									<path
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										d='M8 9l4-4 4 4m0 6l-4 4-4-4'
-									/>
-								</svg>
 							</div>
 
 							<button
@@ -109,13 +114,14 @@ export async function getServerSideProps({ query }) {
 			`https://openapi.etsy.com/v2/listings/${id}?api_key=${etsyAPI}`,
 		);
 		const data = await res.json();
-		let listing = data.results[i].listing_id;
 		let resimage = await fetch(
-			`https://openapi.etsy.com/v2/listings/${id}/images?api_key=jf8evf2p7kh6ihl16tew41k4`,
+			`https://openapi.etsy.com/v2/listings/${id}/images?api_key=${etsyAPI}`,
 		);
 		let image = await resimage.json();
 		return {
 			props: { data, image },
 		};
-	} catch (error) {}
+	} catch (error) {
+		console.log(error);
+	}
 }

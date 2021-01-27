@@ -3,7 +3,7 @@ import Layout from '../components/Layout/Layout';
 import Splash from '../components/Splash/Splash';
 import ProductCards from '../components/ProductCards/ProductCards';
 
-export default function Home({ data }) {
+export default function Home({ data, image }) {
 	return (
 		<Layout title='The Knotty Island'>
 			<Splash />
@@ -17,6 +17,7 @@ export default function Home({ data }) {
 								title={data.results[i].title}
 								price={data.results[i].price}
 								listing={data.results[i].listing_id}
+								image={image}
 							/>
 						);
 					})}
@@ -35,8 +36,16 @@ export async function getStaticProps(context) {
 			`https://openapi.etsy.com/v2/shops/TheKnottyIsland/listings/active?api_key=${etsyAPI}`,
 		);
 		const data = await res.json();
+		for (let i = 0; i < data.results.length; i++) {
+			let id = data.results[i].listing_id;
+			let imageRes = fetch(
+				`https://openapi.etsy.com/v2/listings/${id}/images?api_key=${etsyAPI}`,
+			);
+			let imageData = await (await imageRes).json();
+			image = [{ image: imageData }, ...image];
+		}
 		return {
-			props: { data },
+			props: { data, image },
 		};
 	} catch (error) {
 		console.log(error);
