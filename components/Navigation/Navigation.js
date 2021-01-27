@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Navigation = ({ onRouteChange, isSignedIn, profileOpened }) => {
 	const openCloseMenu = () => {
@@ -116,9 +117,11 @@ const Navigation = ({ onRouteChange, isSignedIn, profileOpened }) => {
 	} else {
 		return (
 			<nav className='bg-white fixed shadow max-w-screen-xl z-10 mx-auto inset-x-0 top-0 flex justify-between items-center'>
-				<button className='font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500'>
-					The Knotty Island
-				</button>
+				<Link href='/'>
+					<button className='font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500'>
+						The Knotty Island
+					</button>
+				</Link>
 
 				<button
 					onClick={openCloseMenu}
@@ -170,9 +173,11 @@ const Navigation = ({ onRouteChange, isSignedIn, profileOpened }) => {
                                                   -translate-y-full md:translate-y-0
                                                   md:mt-1 md:items-center md:mx-1 md:uppercase'
 				>
-					<button className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
-						About Me
-					</button>
+					<Link href='/aboutMe'>
+						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
+							About Me
+						</a>
+					</Link>
 				</div>
 			</nav>
 		);
