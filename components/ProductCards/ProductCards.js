@@ -1,6 +1,8 @@
 import React from 'react';
+import Link from 'next/link';
+import { getStaticProps } from '../../pages';
 
-function ProductCards({ description, title, price, listing }) {
+function ProductCards({ description, title, price, listing, image }) {
 	// imageFull = image.filter(listing);
 	return (
 		<div className='m-5'>
@@ -16,12 +18,11 @@ function ProductCards({ description, title, price, listing }) {
 					<h2 className='text-2xl uppercase'>{title}</h2>
 					<p className='font-light text-gray-500 text-lg my-2'>${price}</p>
 					<p>{description}</p>
-					<a
-						href='#'
-						className='block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'
-					>
-						View
-					</a>
+					<Link href={`/products?id=${listing}`}>
+						<a className='block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>
+							View
+						</a>
+					</Link>
 				</div>
 			</div>
 		</div>

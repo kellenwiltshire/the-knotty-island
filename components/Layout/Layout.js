@@ -10,7 +10,9 @@ function Layout({ title, children }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Navigation />
-			<main className='container mx-auto pt-16 h-screen'>{children}</main>
+			<main className='mx-auto pt-16 h-screen flex justify-center flex-row flex-wrap'>
+				{children}
+			</main>
 			{/* <Footer /> */}
 		</div>
 	);
