@@ -2,21 +2,29 @@ import {
 	REQUEST_STORE_PENDING,
 	REQUEST_STORE_SUCCESS,
 	REQUEST_STORE_FAILURE,
+	REQUEST_PICTURE_PENDING,
+	REQUEST_PICTURE_SUCCESS,
+	REQUEST_PICTURE_FAILURE,
 } from './constants';
 
-export const requestStore = () => (dispatch) => {
+export const requestStore = () => async (dispatch) => {
 	dispatch({ type: REQUEST_STORE_PENDING });
-	fetch(
-		'https://openapi.etsy.com/v2/shops/TheKnottyIsland/listings/active?api_key=jf8evf2p7kh6ihl16tew41k4',
-	)
+
+	fetch('http://LOCALHOST:3000/store')
 		.then((response) => response.json())
 		.then((data) => dispatch({ type: REQUEST_STORE_SUCCESS, payload: data }))
-		.catch((err) => dispatch({ type: REQUEST_STORE_FAILURE, payload: err }));
+		.catch((error) =>
+			dispatch({ type: REQUEST_STORE_FAILURE, payload: error }),
+		);
 };
 
-//!THIS WILL EVENTUALLY GET FILLED OUT TO ADD ITEMS TO A CART/FILTER RESULTS/ETC
+export const requestPictures = () => async (dispatch) => {
+	dispatch({ type: REQUEST_PICTURE_PENDING });
 
-//export const addToCart = (text) = > ({
-//     type: 'ADD_TO_CART',
-//     payload: 'text'
-// })
+	fetch('http://LOCALHOST:3000/pictures')
+		.then((response) => response.json())
+		.then((data) => dispatch({ type: REQUEST_PICTURE_SUCCESS, payload: data }))
+		.catch((error) =>
+			dispatch({ type: REQUEST_PICTURE_FAILURE, payload: error }),
+		);
+};

@@ -1,15 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 
-function ProductCards({ description, title, price, listing, image }) {
-	console.log(image);
-	const listString = listing.toString();
-	let imageURL = '';
-	for (let i = 0; i < image.length; i++) {
-		if (image[i].image.params.listing_id === listString) {
-			imageURL = image[i].image.results.url_fullxfull;
-		}
-	}
+function ProductCards({ description, title, price, listing }) {
+	// let imageURL = '';
+	// for (let i = 0; i < image.length; i++) {
+	// 	if (image[i].image.params.listing_id === listString) {
+	// 		imageURL = image[i].image.results.url_fullxfull;
+	// 	}
+	// }
 	return (
 		<div className='m-5'>
 			<div className='bg-white w-80 shadow-lg cursor-pointer rounded transform hover:scale-105 duration-300 ease-in-out'>
@@ -18,7 +16,7 @@ function ProductCards({ description, title, price, listing, image }) {
 						clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 80%)',
 					}}
 				>
-					<img src={imageURL} alt='' className='rounded-t' />
+					{/* <img src={imageURL} alt='' className='rounded-t' /> */}
 				</div>
 				<div className='p-4'>
 					<h2 className='text-2xl uppercase'>{title}</h2>
