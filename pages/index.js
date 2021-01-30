@@ -12,27 +12,33 @@ export default function Home() {
 		dispatch(requestStore());
 	}, [dispatch]);
 
+	let listings = {};
+
 	const state = useSelector((state) => state);
-	const listings = state.requestStoreListings.listings.results;
-	console.log(listings);
+	if (!state.requestStoreListings.isError) {
+		listings = state.requestStoreListings.listings.results;
+	}
 
 	return (
 		<Layout title='The Knotty Island'>
 			<Splash />
 			<div className='container'>
 				<div className='flex flex-row flex-wrap'>
-					{listings.map((results, i) => {
-						return (
-							<ProductCards
-								key={i}
-								description={listings[i].description}
-								title={listings[i].title}
-								price={listings[i].price}
-								listing={listings[i].listing_id}
-								// image={image}
-							/>
-						);
-					})}
+					{listings ? (
+						listings.map((results, i) => {
+							return (
+								<ProductCards
+									key={i}
+									description={listings[i].description}
+									title={listings[i].title}
+									price={listings[i].price}
+									listing={listings[i].listing_id}
+								/>
+							);
+						})
+					) : (
+						<div></div>
+					)}
 				</div>
 			</div>
 		</Layout>
