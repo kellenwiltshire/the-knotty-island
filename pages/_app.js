@@ -10,9 +10,3 @@ export default function MyApp({ Component, pageProps }) {
 		</Provider>
 	);
 }
-
-// function MyApp({ Component, pageProps }) {
-// 	return <Component {...pageProps} />;
-// }
-
-// export default MyApp;
