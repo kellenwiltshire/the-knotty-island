@@ -89,12 +89,13 @@ function products({ data, image }) {
 								</select>
 							</div>
 
-							<button
-								type='button'
-								className='h-14 px-6 py-2 font-semibold rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white'
+							<a
+								href={url}
+								target='_blank'
+								className='block bg-gray-300 py-3 px-4 text-gray-600 text-center rounded shadow-lg uppercase font-light hover:bg-gray-400 hover:text-white duration-300 ease-in-out'
 							>
-								Add to Cart
-							</button>
+								View on Etsy
+							</a>
 						</div>
 					</div>
 				</div>

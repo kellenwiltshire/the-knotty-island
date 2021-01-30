@@ -178,6 +178,11 @@ const Navigation = ({ onRouteChange, isSignedIn, profileOpened }) => {
 							About Me
 						</a>
 					</Link>
+					<Link href='/categories/categories'>
+						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
+							Products
+						</a>
+					</Link>
 				</div>
 			</nav>
 		);
