@@ -173,14 +173,14 @@ const Navigation = ({ onRouteChange, isSignedIn, profileOpened }) => {
                                                   -translate-y-full md:translate-y-0
                                                   md:mt-1 md:items-center md:mx-1 md:uppercase'
 				>
-					<Link href='/aboutMe'>
-						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
-							About Me
-						</a>
-					</Link>
 					<Link href='/categories/categories'>
 						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
 							Products
+						</a>
+					</Link>
+					<Link href='/aboutMe'>
+						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
+							About Me
 						</a>
 					</Link>
 				</div>

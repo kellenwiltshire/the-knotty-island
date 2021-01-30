@@ -8,7 +8,7 @@ function aboutMe({ data }) {
 	const story = data.results[0].story;
 	console.log('story: ', story);
 	return (
-		<Layout>
+		<Layout title='The Knotty Island || About Me'>
 			<div className='flex flex-col'>
 				<About headline={headline} story={story} />
 				<Contact />
