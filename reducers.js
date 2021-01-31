@@ -2,9 +2,9 @@ import {
 	REQUEST_STORE_PENDING,
 	REQUEST_STORE_SUCCESS,
 	REQUEST_STORE_FAILURE,
-	REQUEST_PICTURE_PENDING,
-	REQUEST_PICTURE_SUCCESS,
-	REQUEST_PICTURE_FAILURE,
+	REQUEST_STATUS_PENDING,
+	REQUEST_STATUS_SUCCESS,
+	REQUEST_STATUS_FAILURE,
 } from './constants';
 import { combineReducers } from 'redux';
 
@@ -35,7 +35,35 @@ const requestStoreListings = (state = intialStateListings, action = {}) => {
 	}
 };
 
+const inititalStoreStatus = {
+	shopStatus: {},
+	isError: false,
+	isPending: false,
+	error: '',
+};
+
+const requestStoreStatus = (state = inititalStoreStatus, action = {}) => {
+	switch (action.type) {
+		case REQUEST_STATUS_PENDING:
+			return Object.assign({}, state, { isPending: true });
+		case REQUEST_STATUS_SUCCESS:
+			return Object.assign({}, state, {
+				shopStatus: action.payload,
+				isPending: false,
+			});
+		case REQUEST_STATUS_FAILURE:
+			return Object.assign({}, state, {
+				error: action.payload,
+				isError: true,
+				isPending: false,
+			});
+		default:
+			return state;
+	}
+};
+
 const reducers = {
 	requestStoreListings: requestStoreListings,
+	requestStoreStatus: requestStoreStatus,
 };
 export default combineReducers(reducers);

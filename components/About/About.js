@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 function About({ story, headline }) {
 	return (
@@ -12,11 +13,12 @@ function About({ story, headline }) {
 					<p class='text-sm sm:text-xl text-center'> {story} </p>
 				</div>
 				<div class='lg:w-5/12 order-2'>
-					<img
-						src='https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80'
+					<Image
+						src='/about_picture.jpg'
 						alt=''
-						class='rounded'
-						// style="transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg) rotate(2deg);"
+						height={500}
+						width={500}
+						className='rounded'
 					/>
 				</div>
 			</div>
