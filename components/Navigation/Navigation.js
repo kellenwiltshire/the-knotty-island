@@ -168,7 +168,7 @@ const Navigation = ({ vacationStatus }) => {
 													  -translate-y-full md:translate-y-0
 													  md:mt-1 md:items-center md:mx-1 md:uppercase'
 				>
-					<Link href='/categories/categories'>
+					<Link href='/categories/allProducts'>
 						<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
 							Products
 						</a>

@@ -18,8 +18,8 @@ function Categories() {
 					<Image
 						src='/wallhanging.jpg'
 						alt='Wallhaning Picture'
-						height={400}
-						width={300}
+						height={800}
+						width={600}
 					/>
 				</div>
 				<div className='p-4'>
@@ -46,8 +46,8 @@ function Categories() {
 					<Image
 						src='/planthanger.jpg'
 						alt='Plant Hanger Picture'
-						height={400}
-						width={300}
+						height={800}
+						width={600}
 					/>
 				</div>
 				<div className='p-4'>
@@ -74,8 +74,8 @@ function Categories() {
 					<Image
 						src='/accessories.jpg'
 						alt='Accessories Picture'
-						height={400}
-						width={300}
+						height={800}
+						width={600}
 					/>
 				</div>
 				<div className='p-4'>

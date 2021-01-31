@@ -19,10 +19,12 @@ export default function Home() {
 	let vacationMessage = '';
 
 	if (!state.requestStoreStatus.isError) {
-		if (state.requestStoreStatus.shopStatus.results[0].is_vacation) {
-			vacation = true;
-			vacationMessage =
-				state.requestStoreStatus.shopStatus.results[0].vacation_message;
+		if (state.requestStoreStatus.shopStatus.results) {
+			if (state.requestStoreStatus.shopStatus.results[0].is_vacation) {
+				vacation = true;
+				vacationMessage =
+					state.requestStoreStatus.shopStatus.results[0].vacation_message;
+			}
 		}
 	}
 

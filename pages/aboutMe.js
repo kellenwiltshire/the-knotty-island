@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout/Layout';
 import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
+import Image from 'next/image';
 
 function aboutMe({ data }) {
 	const headline = data.results[0].story_headline;
@@ -9,7 +10,15 @@ function aboutMe({ data }) {
 	return (
 		<Layout title='The Knotty Island || About Me'>
 			<div className='flex flex-col'>
-				<div className='bg-splash-md bg-auto bg-center h-1/6 bg-no-repeat w-screen justify-items-center bg-gray-300 mb-3'></div>
+				<div className='bg-auto bg-center bg-no-repeat w-screen justify-items-center bg-gray-300 mb-3 self-center'>
+					<Image
+						src='/logo_med.png'
+						alt='Logo'
+						height={300}
+						width={300}
+						className='self-center'
+					/>
+				</div>
 				<div className='container self-center flex justify-between flex-col'>
 					<About headline={headline} story={story} />
 					<Contact />
