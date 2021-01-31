@@ -5,6 +5,9 @@ import {
 	REQUEST_STATUS_PENDING,
 	REQUEST_STATUS_SUCCESS,
 	REQUEST_STATUS_FAILURE,
+	REQUEST_REVIEWS_FAILURE,
+	REQUEST_REVIEWS_PENDING,
+	REQUEST_REVIEWS_SUCCESS,
 } from './constants';
 
 export const requestStore = () => async (dispatch) => {
@@ -26,5 +29,16 @@ export const requestStatus = () => async (dispatch) => {
 		.then((data) => dispatch({ type: REQUEST_STATUS_SUCCESS, payload: data }))
 		.catch((error) =>
 			dispatch({ type: REQUEST_STATUS_FAILURE, payload: error }),
+		);
+};
+
+export const requestReviews = () => async (dispatch) => {
+	dispatch({ type: REQUEST_REVIEWS_PENDING });
+
+	fetch('http://LOCALHOST:3000/reviews')
+		.then((response) => response.json())
+		.then((data) => dispatch({ type: REQUEST_REVIEWS_SUCCESS, payload: data }))
+		.catch((error) =>
+			dispatch({ type: REQUEST_REVIEWS_FAILURE, payload: error }),
 		);
 };
