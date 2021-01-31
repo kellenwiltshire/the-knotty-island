@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: theme => ({
-				'splash': "url('/splash.png')",
+				'splash-lg': "url('/logo_large.png')",
+				'splash-md': "url('/logo_med.png')",
 			})
 		},
 	},

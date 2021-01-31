@@ -6,12 +6,14 @@ import About from '../components/About/About';
 function aboutMe({ data }) {
 	const headline = data.results[0].story_headline;
 	const story = data.results[0].story;
-	console.log('story: ', story);
 	return (
 		<Layout title='The Knotty Island || About Me'>
 			<div className='flex flex-col'>
-				<About headline={headline} story={story} />
-				<Contact />
+				<div className='bg-splash-md bg-auto bg-center h-1/6 bg-no-repeat w-screen justify-items-center bg-gray-300 mb-3'></div>
+				<div className='container self-center flex justify-between flex-col'>
+					<About headline={headline} story={story} />
+					<Contact />
+				</div>
 			</div>
 		</Layout>
 	);
@@ -19,12 +21,9 @@ function aboutMe({ data }) {
 
 export default aboutMe;
 
-export async function getServerSideProps(conext) {
-	const etsyAPI = 'jf8evf2p7kh6ihl16tew41k4';
+export async function getStaticProps(context) {
 	try {
-		const res = await fetch(
-			`https://openapi.etsy.com/v2//shops/TheKnottyIsland/about?api_key=${etsyAPI}`,
-		);
+		const res = await fetch('http://LOCALHOST:3000/aboutme');
 		const data = await res.json();
 		return {
 			props: { data },

@@ -27,7 +27,7 @@ const contact = () => {
 	return (
 		<div
 			id='component'
-			className='flex flex-col justify-center w-full items-center mb-10'
+			className='flex flex-col justify-center w-full items-center m-auto'
 		>
 			<h1 className='text-4xl sm:text-6xl text-gray-600 text-center mb-0 sm:mb-10'>
 				Reach Out

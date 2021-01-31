@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import Categories from '../../components/Categories/Categories';
 
-export default function Categories() {
+export default function allProducts() {
 	return (
 		<Layout title='The Knotty Island || Products'>
 			<div className='container'>

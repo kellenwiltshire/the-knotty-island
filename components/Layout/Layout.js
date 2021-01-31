@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/Head';
 import Navigation from '../Navigation/Navigation';
+import Footer from '../Footer/Footer';
 
 function Layout({ title, children }) {
 	return (
@@ -10,10 +11,10 @@ function Layout({ title, children }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Navigation />
-			<main className='mx-auto pt-16 h-screen flex justify-center flex-row flex-wrap'>
+			<main className='mx-auto pt-16 sm:h-screen flex justify-center flex-row flex-wrap'>
 				{children}
 			</main>
-			{/* <Footer /> */}
+			<Footer />
 		</div>
 	);
 }
