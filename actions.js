@@ -11,6 +11,9 @@ import {
 	REQUEST_ABOUT_PENDING,
 	REQUEST_ABOUT_SUCCESS,
 	REQUEST_ABOUT_FAILURE,
+	REQUEST_LISTING_PENDING,
+	REQUEST_LISTING_SUCCESS,
+	REQUEST_LISTING_FAILURE,
 } from './constants';
 
 export const requestStore = () => async (dispatch) => {
@@ -54,5 +57,16 @@ export const requestAbout = () => async (dispatch) => {
 		.then((data) => dispatch({ type: REQUEST_ABOUT_SUCCESS, payload: data }))
 		.catch((error) =>
 			dispatch({ type: REQUEST_ABOUT_FAILURE, payload: error }),
+		);
+};
+
+export const requestListingImage = (listing) => async (dispatch) => {
+	dispatch({ type: REQUEST_LISTING_PENDING });
+
+	fetch(`http://LOCALHOST:3000/listing/${listing}`)
+		.then((response) => response.json())
+		.then((data) => dispatch({ type: REQUEST_LISTING_SUCCESS, payload: data }))
+		.catch((error) =>
+			dispatch({ type: REQUEST_LISTING_FAILURE, payload: error }),
 		);
 };

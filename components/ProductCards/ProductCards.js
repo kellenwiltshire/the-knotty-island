@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { requestListingImage } from '../../actions';
 
 function ProductCards({ description, title, price, listing }) {
-	const [image, setImage] = useState(null);
-
+	const dispatch = useDispatch();
 	useEffect(() => {
-		fetch(`http://LOCALHOST:3000/listing/${listing}`)
-			.then((res) => res.json())
-			.then((data) => setImage(data.results[0].url_fullxfull));
-	}, []);
+		dispatch(requestListingImage(listing));
+	}, [dispatch]);
+
+	const state = useSelector((state) => state);
+	console.log(state.requestListingImage);
 	return (
 		<div className='m-5'>
 			<div className='bg-white w-80 shadow-lg cursor-pointer rounded transform hover:scale-105 duration-300 ease-in-out'>
@@ -17,7 +19,7 @@ function ProductCards({ description, title, price, listing }) {
 						clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 80%)',
 					}}
 				>
-					<img src={image} alt='' className='rounded-t' />
+					{/* <img src={image} alt='' className='rounded-t' /> */}
 				</div>
 				<div className='p-4'>
 					<h2 className='text-2xl uppercase'>{title}</h2>
