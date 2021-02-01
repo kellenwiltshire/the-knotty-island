@@ -8,6 +8,9 @@ import {
 	REQUEST_REVIEWS_FAILURE,
 	REQUEST_REVIEWS_PENDING,
 	REQUEST_REVIEWS_SUCCESS,
+	REQUEST_ABOUT_PENDING,
+	REQUEST_ABOUT_SUCCESS,
+	REQUEST_ABOUT_FAILURE,
 } from './constants';
 
 export const requestStore = () => async (dispatch) => {
@@ -40,5 +43,16 @@ export const requestReviews = () => async (dispatch) => {
 		.then((data) => dispatch({ type: REQUEST_REVIEWS_SUCCESS, payload: data }))
 		.catch((error) =>
 			dispatch({ type: REQUEST_REVIEWS_FAILURE, payload: error }),
+		);
+};
+
+export const requestAbout = () => async (dispatch) => {
+	dispatch({ type: REQUEST_ABOUT_PENDING });
+
+	fetch('http://LOCALHOST:3000/aboutMe')
+		.then((response) => response.json())
+		.then((data) => dispatch({ type: REQUEST_ABOUT_SUCCESS, payload: data }))
+		.catch((error) =>
+			dispatch({ type: REQUEST_ABOUT_FAILURE, payload: error }),
 		);
 };

@@ -1,44 +1,51 @@
 import Splash from '../components/Splash/Splash';
 import Categories from '../components/Categories/Categories';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
-import { requestStatus, requestReviews } from '../actions';
+import {
+	requestStore,
+	requestStatus,
+	requestReviews,
+	requestAbout,
+} from '../actions';
 import Vacation from '../components/Vacation/Vacation';
 import Reviews from '../components/Reviews/Reviews';
 
 export default function Home() {
 	const dispatch = useDispatch();
 	useEffect(() => {
+		dispatch(requestStore());
 		dispatch(requestStatus());
 		dispatch(requestReviews());
+		dispatch(requestAbout());
 	}, [dispatch]);
 
 	const state = useSelector((state) => state);
 
-	let reviews = state.requestReviews.reviews.results;
-	console.log(reviews);
+	const shopStatus = state.requestStoreStatus.shopStatus;
 
-	let vacation = false;
+	let vacationStatus = false;
 	let vacationMessage = '';
 
-	if (!state.requestStoreStatus.isError) {
-		if (state.requestStoreStatus.shopStatus.results) {
-			if (state.requestStoreStatus.shopStatus.results[0].is_vacation) {
-				vacation = true;
-				vacationMessage =
-					state.requestStoreStatus.shopStatus.results[0].vacation_message;
+	if (!shopStatus.isError) {
+		if (shopStatus.results) {
+			if (shopStatus.results[0].is_vacation) {
+				vacationStatus = true;
+				vacationMessage = shopStatus.results[0].vacation_message;
 			}
 		}
 	}
 
-	if (vacation) {
+	if (vacationStatus) {
 		return (
-			<Layout title='The Knotty Island' vacation={vacation}>
+			<Layout title='The Knotty Island' vacationStatus={vacationStatus}>
 				<Splash />
 				<div className='container'>
-					<div className='flex flex-row flex-wrap'>
+					<div className='flex flex-row flex-wrap justify-center'>
+						<h1 className='self-center text-4xl mb-10'>The Knotty Island</h1>
 						<Vacation vacationMessage={vacationMessage} />
+						<Reviews />
 					</div>
 				</div>
 			</Layout>
@@ -51,7 +58,6 @@ export default function Home() {
 					<div className='flex flex-row flex-wrap justify-center'>
 						<h1 className='self-center text-4xl'>The Knotty Island</h1>
 						<Categories />
-						<Reviews />
 					</div>
 				</div>
 			</Layout>

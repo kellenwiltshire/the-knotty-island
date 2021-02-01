@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import Contact from '../components/Contact/Contact';
 import About from '../components/About/About';
 import Image from 'next/image';
+import { useSelector } from 'react-redux';
 
-function aboutMe({ data }) {
-	const headline = data.results[0].story_headline;
-	const story = data.results[0].story;
+function aboutMe() {
+	const about = useSelector((state) => state.requestAbout.about);
+
+	let headline = '';
+	let story = '';
+
+	if (!about.isError) {
+		if (about.results) {
+			headline = about.results[0].story_headline;
+			story = about.results[0].story;
+		}
+	}
 	return (
 		<Layout title='The Knotty Island || About Me'>
 			<div className='flex flex-col'>
@@ -29,15 +39,3 @@ function aboutMe({ data }) {
 }
 
 export default aboutMe;
-
-export async function getStaticProps(context) {
-	try {
-		const res = await fetch('http://LOCALHOST:3000/aboutme');
-		const data = await res.json();
-		return {
-			props: { data },
-		};
-	} catch (error) {
-		console.log(error);
-	}
-}

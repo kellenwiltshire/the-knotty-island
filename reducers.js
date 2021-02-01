@@ -8,6 +8,9 @@ import {
 	REQUEST_REVIEWS_FAILURE,
 	REQUEST_REVIEWS_PENDING,
 	REQUEST_REVIEWS_SUCCESS,
+	REQUEST_ABOUT_PENDING,
+	REQUEST_ABOUT_SUCCESS,
+	REQUEST_ABOUT_FAILURE,
 } from './constants';
 import { combineReducers } from 'redux';
 
@@ -92,9 +95,37 @@ const requestReviews = (state = initialReviewsState, action = {}) => {
 	}
 };
 
+const initialAboutState = {
+	about: {},
+	isError: false,
+	isPending: false,
+	error: '',
+};
+
+const requestAbout = (state = initialAboutState, action = {}) => {
+	switch (action.type) {
+		case REQUEST_ABOUT_PENDING:
+			return Object.assign({}, state, { isPending: true });
+		case REQUEST_ABOUT_SUCCESS:
+			return Object.assign({}, state, {
+				about: action.payload,
+				isPending: false,
+			});
+		case REQUEST_ABOUT_FAILURE:
+			return Object.assign({}, state, {
+				error: action.payload,
+				isError: true,
+				isPending: false,
+			});
+		default:
+			return state;
+	}
+};
+
 const reducers = {
 	requestStoreListings: requestStoreListings,
 	requestStoreStatus: requestStoreStatus,
 	requestReviews: requestReviews,
+	requestAbout: requestAbout,
 };
 export default combineReducers(reducers);

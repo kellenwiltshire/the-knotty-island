@@ -1,7 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 
-const Navigation = ({ vacationStatus }) => {
+const Navigation = () => {
+	const storeStatus = useSelector(
+		(state) => state.requestStoreStatus.shopStatus,
+	);
+
+	let vacationStatus = false;
+
+	if (!storeStatus.isError) {
+		if (storeStatus.results) {
+			vacationStatus = storeStatus.results[0].is_vacation;
+		}
+	}
+
 	const openCloseMenu = () => {
 		const mobileMenuButton = document.getElementById('mobileMenuButton');
 		mobileMenuButton.onclick = function () {
