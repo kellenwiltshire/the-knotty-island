@@ -14,8 +14,8 @@ function Layout({ title, children, vacation }) {
 			<Navigation vacationStatus={vacationStatus} />
 			<main className='mx-auto pt-16 sm:h-screen flex justify-center flex-row flex-wrap'>
 				{children}
+				<Footer />
 			</main>
-			<Footer />
 		</div>
 	);
 }

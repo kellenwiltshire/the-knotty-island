@@ -16,7 +16,7 @@ function products({ data, image }) {
 		<Layout>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6'>
 				<div className='flex flex-col md:flex-row -mx-4'>
-					<div className='md:flex-1 px-4'>
+					<div className='md:flex-1 px-4 order-2 sm:order-1'>
 						{image.results.map((link, i) => {
 							return (
 								<img
@@ -29,7 +29,7 @@ function products({ data, image }) {
 							);
 						})}
 					</div>
-					<div className='md:flex-1 px-4'>
+					<div className='md:flex-1 px-4 order-1 sm:order-2'>
 						<h2 className='mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl'>
 							{title}
 						</h2>

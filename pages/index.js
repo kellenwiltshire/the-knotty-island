@@ -58,6 +58,7 @@ export default function Home() {
 					<div className='flex flex-row flex-wrap justify-center'>
 						<h1 className='self-center text-4xl'>The Knotty Island</h1>
 						<Categories />
+						<Reviews />
 					</div>
 				</div>
 			</Layout>
