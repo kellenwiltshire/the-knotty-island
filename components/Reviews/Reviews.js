@@ -12,7 +12,7 @@ function Reviews() {
 					let fixedMessage = message.replace('I&#39;m', "I'm");
 					fixedMessage = fixedMessage.replace('t&#39;s', "t's");
 					return (
-						<div className='rounded shadow-xl m-2 max-w-md p-4 text-center border bg-gray-300'>
+						<div className='text-xs sm:text-base leading-relaxed rounded shadow-xl m-2 max-w-md p-4 text-center border bg-gray-300'>
 							{fixedMessage}
 						</div>
 					);

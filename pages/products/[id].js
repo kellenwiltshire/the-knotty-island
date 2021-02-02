@@ -6,11 +6,9 @@ function products({ data, image }) {
 	const description = data.results[0].description;
 	const price = data.results[0].price;
 	const materials = [data.results[0].materials];
-	const item_weight = data.results[0].item_weight;
 	const item_width = data.results[0].item_width;
 	const item_length = data.results[0].item_length;
 	const url = data.results[0].url;
-	console.log(image);
 
 	return (
 		<Layout>
@@ -47,7 +45,7 @@ function products({ data, image }) {
 
 						<div className='text-gray-500'>
 							<span className='text-xl font-bold'>Description: </span>{' '}
-							<p>{description}</p>
+							<p className='leading-relaxed'>{description}</p>
 						</div>
 
 						<div>
@@ -70,25 +68,8 @@ function products({ data, image }) {
 							<span className='text-gray-500 text-xl font-bold'>Width: </span>
 							<p className='text-gray-500'>{item_width}mm</p>
 						</div>
-						<div>
-							<span className='text-gray-500 text-xl font-bold'>Weight: </span>
-							<p className='text-gray-500'>{item_weight}grams</p>
-						</div>
 
 						<div className='flex py-4 space-x-4'>
-							<div className='relative'>
-								<div className='text-center left-0 pt-2 right-0 absolute block text-xs uppercase text-gray-400 tracking-wide font-semibold'>
-									Qty
-								</div>
-								<select className='cursor-pointer appearance-none rounded-xl border border-gray-200 pl-4 pr-8 h-14 flex items-end pb-1'>
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-								</select>
-							</div>
-
 							<a
 								href={url}
 								target='_blank'

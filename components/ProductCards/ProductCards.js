@@ -34,7 +34,7 @@ function ProductCards({ description, title, price, listing }) {
 							query: { id: listing },
 						}}
 					>
-						<a className='text-xs sm:text block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light sm:mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>
+						<a className='text-xs sm:text-xl block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light sm:mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>
 							View
 						</a>
 					</Link>
