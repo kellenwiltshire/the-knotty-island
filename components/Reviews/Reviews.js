@@ -8,9 +8,12 @@ function Reviews() {
 			<h1 className='w-full self-center'>Reviews</h1>
 			{reviews ? (
 				reviews.map((review, i) => {
+					let message = reviews[i].message;
+					let fixedMessage = message.replace('I&#39;m', "I'm");
+					fixedMessage = fixedMessage.replace('t&#39;s', "t's");
 					return (
 						<div className='rounded shadow-xl m-2 max-w-md p-4 text-center border bg-gray-300'>
-							{reviews[i].message}
+							{fixedMessage}
 						</div>
 					);
 				})

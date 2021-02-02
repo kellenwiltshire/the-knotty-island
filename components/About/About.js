@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 function About({ story, headline }) {
+	let fixedStory = story.replace('&#39;', "'");
 	return (
 		<div class='container m-auto px-6'>
 			<div class='lg:flex justify-between items-center'>
@@ -10,7 +11,7 @@ function About({ story, headline }) {
 						{' '}
 						{headline}{' '}
 					</h1>
-					<p class='text-sm sm:text-xl text-center'> {story} </p>
+					<p class='text-sm sm:text-xl text-center'> {fixedStory} </p>
 				</div>
 				<div class='lg:w-5/12 order-2'>
 					<Image

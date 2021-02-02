@@ -12,10 +12,10 @@ function Layout({ title, children, vacation }) {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Navigation vacationStatus={vacationStatus} />
-			<main className='mx-auto pt-16 sm:h-screen flex justify-center flex-row flex-wrap'>
+			<main className='mx-auto pt-16 sm:min-h-screen flex justify-center flex-row flex-wrap'>
 				{children}
-				<Footer />
 			</main>
+			<Footer />
 		</div>
 	);
 }
