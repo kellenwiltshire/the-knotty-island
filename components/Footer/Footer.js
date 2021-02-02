@@ -44,12 +44,14 @@ function Footer() {
 								<line x1='16.5' y1='7.5' x2='16.5' y2='7.501' />
 							</svg>
 						</a>
-						<a href='#'>
+						<a href='https://www.etsy.com/ca/shop/TheKnottyIsland'>
 							<p className='text-blue-500'>Etsy</p>
 						</a>
 					</div>
 					<p className='text-xs inline-flex text-gray-400 px-2 pt-6'>
-						Web Development by Kellen Wiltshire
+						<a href='https://www.kellenwiltshire.com' target='_blank'>
+							Web Development by Kellen Wiltshire
+						</a>
 					</p>
 				</div>
 			</div>
