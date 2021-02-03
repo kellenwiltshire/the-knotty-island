@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Splash() {
 	return (
-		<div className='w-screen justify-items-center flex flex-row place-content-center mb-5'>
+		<div className='w-screen justify-items-center flex flex-row place-content-center sm:mb-5'>
 			<Image
 				src='/splash_island.jpg'
 				alt='Logo'

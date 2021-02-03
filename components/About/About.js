@@ -24,7 +24,7 @@ function About() {
 		<div class='container m-auto px-1 sm:px-6'>
 			<div class='lg:flex justify-between items-center'>
 				<div class='lg:w-6/12 lg:p-0 p-7'>
-					<h1 class='text-2xl sm:text-6xl text-center mb-0 sm:mb-10 font-title'>
+					<h1 class='text-3xl sm:text-6xl text-center mb-0 sm:mb-10 font-title'>
 						{' '}
 						{headline}{' '}
 					</h1>

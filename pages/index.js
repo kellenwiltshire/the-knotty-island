@@ -62,10 +62,10 @@ export default function Home() {
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
 						<div>
-							<h1 className='self-center text-8xl text-center font-title mb-2'>
+							<h1 className='self-center text-5xl sm:text-8xl text-center font-title mb-2'>
 								The Knotty Island
 							</h1>
-							<h2 className='self-center text-2xl text-center font-body'>
+							<h2 className='self-center text-xl sm:text-2xl text-center font-body'>
 								Handmade Macrame Decor
 							</h2>
 						</div>
