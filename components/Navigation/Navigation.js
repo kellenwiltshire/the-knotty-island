@@ -43,9 +43,9 @@ const Navigation = () => {
 		});
 	};
 	return (
-		<nav className='bg-white fixed shadow max-w-screen-xl z-10 mx-auto inset-x-0 top-0 flex justify-between items-center'>
+		<nav className='bg-white rounded-b-md fixed shadow max-w-screen-xl z-10 mx-auto inset-x-0 top-0 flex justify-between items-center'>
 			<Link href='/'>
-				<button className='font-extrabold m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500'>
+				<button className='m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500'>
 					The Knotty Island
 				</button>
 			</Link>
@@ -93,7 +93,7 @@ const Navigation = () => {
 			{/* <!-- List of nav item --> */}
 			<div
 				id='sideMenuHideOnMobile'
-				className='bg-white font-semibold z-10 rounded-bl-md flex absolute top-0 right-0 transition-all duration-500 transform translate-x-0
+				className='bg-white z-10 rounded-bl-md flex absolute top-0 right-0 transition-all duration-500 transform translate-x-0
 													  w-1/2 md:w-auto
 													  px-3 md:px-0
 													  flex-col md:flex-row
@@ -101,7 +101,7 @@ const Navigation = () => {
 													  md:mt-1 md:items-center md:mx-1 md:uppercase'
 			>
 				<Link href='/aboutMe'>
-					<a className='font-bold mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
+					<a className='mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
 						About Me
 					</a>
 				</Link>
