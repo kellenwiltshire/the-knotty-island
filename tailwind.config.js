@@ -8,6 +8,10 @@ module.exports = {
 				'splash-md': "url('/logo_med.png')",
 			})
 		},
+		fontFamily: {
+			'title': 'Sacramento',
+			'body': 'Open Sans'
+		}
 	},
 	variants: {
 		extend: {

@@ -43,7 +43,7 @@ const Navigation = () => {
 		});
 	};
 	return (
-		<nav className='bg-white rounded-b-md fixed shadow max-w-screen-xl z-10 mx-auto inset-x-0 top-0 flex justify-between items-center'>
+		<nav className='bg-white rounded-b-md fixed shadow max-w-screen-xl z-10 mx-auto inset-x-0 top-0 flex justify-between items-center font-body'>
 			<Link href='/'>
 				<button className='m-3 uppercase inline-flex hover:text-pink-700 transition-all duration-500'>
 					The Knotty Island
@@ -100,6 +100,11 @@ const Navigation = () => {
 													  -translate-y-full md:translate-y-0
 													  md:mt-1 md:items-center md:mx-1 md:uppercase'
 			>
+				<Link href='/'>
+					<a className='mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
+						Home
+					</a>
+				</Link>
 				<Link href='/aboutMe'>
 					<a className='mx-0 sm:mx-2 my-2 border-b-2 border-transparent hover:border-pink-600 hover:text-pink-700 transition-all duration-500 py-1 sm:p-0'>
 						About Me

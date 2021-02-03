@@ -15,7 +15,7 @@ function ProductCards({ description, title, price, listing }) {
 			.then((data) => setImage(data.results[0].url_fullxfull));
 	});
 	return (
-		<div className='m-1 sm:m-5'>
+		<div className='m-1 sm:m-5 font-body'>
 			<div className='bg-white w-28 sm:w-40 md:w-80 shadow-lg cursor-pointer rounded transform hover:scale-105 duration-300 ease-in-out'>
 				<div
 					style={{

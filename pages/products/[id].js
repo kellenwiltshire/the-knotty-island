@@ -12,7 +12,7 @@ function products({ data, image }) {
 
 	return (
 		<Layout title={`The Knotty Island || ${title}`}>
-			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6'>
+			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 font-body'>
 				<div className='flex flex-col md:flex-row -mx-4'>
 					<div className='md:flex-1 px-4 order-2 sm:order-1'>
 						{image.results.map((link, i) => {

@@ -48,7 +48,7 @@ function Footer() {
 							<p className='text-blue-500'>Etsy</p>
 						</a>
 					</div>
-					<p className='text-xs inline-flex text-gray-400 px-2 pt-6'>
+					<p className='text-xs inline-flex text-gray-400 px-2 pt-6 font-body'>
 						<a href='https://www.kellenwiltshire.com' target='_blank'>
 							Web Development by Kellen Wiltshire
 						</a>

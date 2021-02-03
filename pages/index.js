@@ -40,10 +40,10 @@ export default function Home() {
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
 						<div>
-							<h1 className='self-center text-4xl text-center'>
+							<h1 className='self-center text-8xl text-center font-title mb-2'>
 								The Knotty Island
 							</h1>
-							<h2 className='self-center text-2xl text-center'>
+							<h2 className='self-center text-2xl text-center font-body'>
 								Handmade Macrame Decor
 							</h2>
 						</div>
@@ -62,10 +62,10 @@ export default function Home() {
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
 						<div>
-							<h1 className='self-center text-4xl text-center'>
+							<h1 className='self-center text-8xl text-center font-title mb-2'>
 								The Knotty Island
 							</h1>
-							<h2 className='self-center text-2xl text-center'>
+							<h2 className='self-center text-2xl text-center font-body'>
 								Handmade Macrame Decor
 							</h2>
 						</div>

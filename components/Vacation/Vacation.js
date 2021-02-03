@@ -2,7 +2,7 @@ import React from 'react';
 
 function Vacation({ vacationMessage }) {
 	return (
-		<div className='w-full flex justify-center flex-col items-center text-2xl text-center m-5 bg-gray-200 p-2'>
+		<div className='w-full flex justify-center flex-col items-center text-2xl text-center m-5 bg-gray-200 p-2 font-body'>
 			{vacationMessage}
 			<div className='flex flex-row items-center space-x-10'>
 				{/* Facebook */}

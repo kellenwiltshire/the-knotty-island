@@ -5,7 +5,9 @@ function Reviews() {
 	const reviews = useSelector((state) => state.requestReviews.reviews.results);
 	return (
 		<div className='w-full flex align-middle justify-center flex-row flex-wrap items-center text-center pt-10'>
-			<h1 className='w-full self-center'>Customer Reviews</h1>
+			<h1 className='text-4xl sm:text-6xl w-full self-center font-title'>
+				Customer Reviews
+			</h1>
 			{reviews ? (
 				reviews.map((review, i) => {
 					let message = reviews[i].message;
@@ -14,7 +16,7 @@ function Reviews() {
 					return (
 						<div
 							key={i}
-							className='text-xs sm:text-base leading-relaxed rounded shadow-xl m-2 max-w-lg p-4 text-center border bg-gray-300'
+							className='text-xs sm:text-base leading-relaxed rounded shadow-xl m-2 max-w-lg p-4 text-center border bg-gray-300 font-body'
 						>
 							{fixedMessage}
 						</div>

@@ -29,14 +29,14 @@ const contact = () => {
 			id='component'
 			className='flex flex-col justify-center w-full items-center m-auto'
 		>
-			<h1 className='text-4xl sm:text-6xl text-center mb-0 sm:mb-10'>
+			<h1 className='text-4xl sm:text-6xl text-center mb-0 sm:m-5 font-title'>
 				Contact Me
 			</h1>
 			<div className='mt-5 sm:mt-0 shadow xl:w-full w-11/12'>
 				<div className='md:grid md:grid-cols-1 md:gap-6'>
 					<div className='mt-5 md:mt-0 md:col-span-2'>
 						<form id='contact' onSubmit='#'>
-							<div className='shadow overflow-hidden sm:rounded-md'>
+							<div className='shadow overflow-hidden sm:rounded-md font-body'>
 								<div className='px-4 py-5 bg-white sm:p-6'>
 									<div className='grid grid-cols-6 gap-6'>
 										<div className='col-span-6 sm:col-span-3'>

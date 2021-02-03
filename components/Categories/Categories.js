@@ -8,7 +8,7 @@ function Categories() {
 	const accessories_id = 29679696;
 
 	return (
-		<div className='m-1 sm:m-5 flex flex-row flex-wrap justify-around w-full'>
+		<div className='m-1 sm:m-5 flex flex-row flex-wrap justify-around w-full font-body'>
 			<div className='bg-white w-28 sm:w-40 md:w-80 shadow-lg cursor-pointer rounded transform hover:scale-105 duration-300 ease-in-out'>
 				<div
 					style={{
