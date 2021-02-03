@@ -11,7 +11,7 @@ function products({ data, image }) {
 	const url = data.results[0].url;
 
 	return (
-		<Layout>
+		<Layout title={`The Knotty Island || ${title}`}>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6'>
 				<div className='flex flex-col md:flex-row -mx-4'>
 					<div className='md:flex-1 px-4 order-2 sm:order-1'>
@@ -49,17 +49,6 @@ function products({ data, image }) {
 						</div>
 
 						<div>
-							<span className='text-gray-500 text-xl font-bold'>
-								Materials:{' '}
-							</span>
-							<ul className='text-gray-500'>
-								{materials.map((mat, i) => {
-									return <li key={i}>{materials[i] + ' '}</li>;
-								})}
-							</ul>
-						</div>
-
-						<div>
 							<span className='text-gray-500 text-xl font-bold'>Length: </span>
 							<p className='text-gray-500'>{item_length}mm</p>
 						</div>
@@ -87,18 +76,12 @@ function products({ data, image }) {
 
 export default products;
 
-//! This will fetch more detailed information regarding the product for the product page
 export async function getServerSideProps({ query }) {
-	const etsyAPI = 'jf8evf2p7kh6ihl16tew41k4';
 	const id = query.id;
 	try {
-		const res = await fetch(
-			`https://openapi.etsy.com/v2/listings/${id}?api_key=${etsyAPI}`,
-		);
+		const res = await fetch(`http://LOCALHOST:3000/listinginfo/${id}`);
 		const data = await res.json();
-		let resimage = await fetch(
-			`https://openapi.etsy.com/v2/listings/${id}/images?api_key=${etsyAPI}`,
-		);
+		let resimage = await fetch(`http://LOCALHOST:3000/listingpictures/${id}`);
 		let image = await resimage.json();
 		return {
 			props: { data, image },

@@ -29,20 +29,20 @@ const contact = () => {
 			id='component'
 			className='flex flex-col justify-center w-full items-center m-auto'
 		>
-			<h1 className='text-4xl sm:text-6xl text-gray-600 text-center mb-0 sm:mb-10'>
-				Reach Out
+			<h1 className='text-4xl sm:text-6xl text-center mb-0 sm:mb-10'>
+				Contact Me
 			</h1>
-			<div class='mt-5 sm:mt-0 shadow xl:w-full w-11/12'>
-				<div class='md:grid md:grid-cols-1 md:gap-6'>
-					<div class='mt-5 md:mt-0 md:col-span-2'>
+			<div className='mt-5 sm:mt-0 shadow xl:w-full w-11/12'>
+				<div className='md:grid md:grid-cols-1 md:gap-6'>
+					<div className='mt-5 md:mt-0 md:col-span-2'>
 						<form id='contact' onSubmit='#'>
-							<div class='shadow overflow-hidden sm:rounded-md'>
-								<div class='px-4 py-5 bg-white sm:p-6'>
-									<div class='grid grid-cols-6 gap-6'>
-										<div class='col-span-6 sm:col-span-3'>
+							<div className='shadow overflow-hidden sm:rounded-md'>
+								<div className='px-4 py-5 bg-white sm:p-6'>
+									<div className='grid grid-cols-6 gap-6'>
+										<div className='col-span-6 sm:col-span-3'>
 											<label
-												for='first_name'
-												class='block text-sm font-medium text-black'
+												htmlFor='first_name'
+												className='block text-sm font-medium text-black'
 											>
 												First name
 											</label>
@@ -51,15 +51,15 @@ const contact = () => {
 												name='first_name'
 												id='first_name'
 												autoComplete='given-name'
-												class='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
+												className='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
 												required
 											/>
 										</div>
 
-										<div class='col-span-6 sm:col-span-3'>
+										<div className='col-span-6 sm:col-span-3'>
 											<label
-												for='last_name'
-												class='block text-sm font-medium text-black'
+												htmlFor='last_name'
+												className='block text-sm font-medium text-black'
 											>
 												Last name
 											</label>
@@ -68,15 +68,15 @@ const contact = () => {
 												name='last_name'
 												id='last_name'
 												autoComplete='family-name'
-												class='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
+												className='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
 												required
 											/>
 										</div>
 
-										<div class='col-span-6 sm:col-span-5'>
+										<div className='col-span-6 sm:col-span-5'>
 											<label
-												for='email_address'
-												class='block text-sm font-medium text-black'
+												htmlFor='email_address'
+												className='block text-sm font-medium text-black'
 											>
 												Email address
 											</label>
@@ -85,23 +85,23 @@ const contact = () => {
 												name='email_address'
 												id='email_address'
 												autoComplete='email'
-												class='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
+												className='mt-1 focus:ring-gray-300 focus:border-gray-300 block w-full shadow-sm sm:text-sm border-gray-500 rounded-md'
 												required
 											/>
 										</div>
-										<div class='col-span-6'>
+										<div className='col-span-6'>
 											<label
-												for='about'
-												class='block text-sm font-medium text-black'
+												htmlFor='about'
+												className='block text-sm font-medium text-black'
 											>
 												Brief Description About Your Request
 											</label>
-											<div class='mt-1'>
+											<div className='mt-1'>
 												<textarea
 													id='description'
 													name='description'
 													rows='3'
-													class='shadow-sm focus:gray-300 focus:border-gray-300 mt-1 block w-full sm:text-sm border-gray-500 rounded-md'
+													className='shadow-sm focus:ring-gray-300 focus:border-gray-300 mt-1 block w-full sm:text-sm border-gray-500 rounded-md'
 													placeholder='Description'
 													required
 												></textarea>
@@ -109,10 +109,10 @@ const contact = () => {
 										</div>
 									</div>
 								</div>
-								<div class='px-4 py-3 bg-gray-50 text-right sm:px-6'>
+								<div className='px-4 py-3 bg-gray-50 text-right sm:px-6'>
 									<button
 										type='submit'
-										class='inline-flex justify-center py-2 px-4 border border-transparent text-black shadow-sm text-sm font-medium rounded-md bg-gray-300 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+										className='inline-flex justify-center py-2 px-4 border border-transparent text-black shadow-sm text-sm font-medium rounded-md bg-gray-300 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
 									>
 										Submit
 									</button>

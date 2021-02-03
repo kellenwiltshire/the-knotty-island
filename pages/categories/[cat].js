@@ -23,7 +23,7 @@ function categories({ category }) {
 	}
 
 	return (
-		<Layout>
+		<Layout title='The Knotty Island || Handmade Macrame Decor'>
 			{filterListings.length ? (
 				filterListings.map((list, i) => {
 					return (

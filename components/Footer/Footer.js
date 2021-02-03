@@ -10,15 +10,15 @@ function Footer() {
 						<a href='#'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								class='icon icon-tabler icon-tabler-brand-facebook'
+								className='icon icon-tabler icon-tabler-brand-facebook'
 								width='24'
 								height='24'
 								viewBox='0 0 24 24'
-								stroke-width='1.5'
+								strokeWidth='1.5'
 								stroke='#2563eb'
 								fill='none'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							>
 								<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 								<path d='M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3' />
@@ -28,15 +28,15 @@ function Footer() {
 						<a href='#'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
-								class='icon icon-tabler icon-tabler-brand-instagram'
+								className='icon icon-tabler icon-tabler-brand-instagram'
 								width='24'
 								height='24'
 								viewBox='0 0 24 24'
-								stroke-width='1.5'
+								strokeWidth='1.5'
 								stroke='#2563eb'
 								fill='none'
-								stroke-linecap='round'
-								stroke-linejoin='round'
+								strokeLinecap='round'
+								strokeLinejoin='round'
 							>
 								<path stroke='none' d='M0 0h24v24H0z' fill='none' />
 								<rect x='4' y='4' width='16' height='16' rx='4' />

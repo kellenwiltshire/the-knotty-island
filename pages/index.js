@@ -3,14 +3,11 @@ import Categories from '../components/Categories/Categories';
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-	requestStore,
-	requestStatus,
-	requestReviews,
-	requestAbout,
-} from '../actions';
+import { requestStore, requestStatus, requestReviews } from '../actions';
 import Vacation from '../components/Vacation/Vacation';
 import Reviews from '../components/Reviews/Reviews';
+import About from '../components/About/About';
+import Contact from '../components/Contact/Contact';
 
 export default function Home() {
 	const dispatch = useDispatch();
@@ -18,7 +15,6 @@ export default function Home() {
 		dispatch(requestStore());
 		dispatch(requestStatus());
 		dispatch(requestReviews());
-		dispatch(requestAbout());
 	}, [dispatch]);
 
 	const state = useSelector((state) => state);
@@ -39,12 +35,21 @@ export default function Home() {
 
 	if (vacationStatus) {
 		return (
-			<Layout title='The Knotty Island' vacationStatus={vacationStatus}>
+			<Layout title='The Knotty Island || Handmade Macrame Decor'>
 				<Splash />
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
-						<h1 className='self-center text-4xl mb-10'>The Knotty Island</h1>
+						<div>
+							<h1 className='self-center text-4xl text-center'>
+								The Knotty Island
+							</h1>
+							<h2 className='self-center text-2xl text-center'>
+								Handmade Macrame Decor
+							</h2>
+						</div>
 						<Vacation vacationMessage={vacationMessage} />
+						<About />
+						<Contact />
 						<Reviews />
 					</div>
 				</div>
@@ -56,7 +61,14 @@ export default function Home() {
 				<Splash />
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
-						<h1 className='self-center text-4xl'>The Knotty Island</h1>
+						<div>
+							<h1 className='self-center text-4xl text-center'>
+								The Knotty Island
+							</h1>
+							<h2 className='self-center text-2xl text-center'>
+								Handmade Macrame Decor
+							</h2>
+						</div>
 						<Categories />
 						<Reviews />
 					</div>
