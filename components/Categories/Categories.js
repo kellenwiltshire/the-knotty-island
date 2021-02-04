@@ -29,7 +29,7 @@ function Categories() {
 					<Link
 						href={{
 							pathname: '/categories/[cat]',
-							query: { cat: wallhanging_id },
+							query: { cat: wallhanging_id, name: 'Wallhangings' },
 						}}
 					>
 						<a className='text-xs sm:text-base md:text-2xl block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>
@@ -59,7 +59,7 @@ function Categories() {
 					<Link
 						href={{
 							pathname: '/categories/[cat]',
-							query: { cat: planthangers_id },
+							query: { cat: planthangers_id, name: 'Plant Hangers' },
 						}}
 					>
 						<a className='text-xs sm:text-base md:text-2xl block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>
@@ -89,7 +89,7 @@ function Categories() {
 					<Link
 						href={{
 							pathname: '/categories/[cat]',
-							query: { cat: accessories_id },
+							query: { cat: accessories_id, name: 'Accessories' },
 						}}
 					>
 						<a className='text-xs sm:text-base md:text-2xl block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { requestStore } from '../../actions';
 import ProductCards from '../../components/ProductCards/ProductCards';
 
-function categories({ category }) {
+function categories({ category, name }) {
 	const cat = category;
 	const dispatch = useDispatch();
 	useEffect(() => {
@@ -24,22 +24,26 @@ function categories({ category }) {
 
 	return (
 		<Layout title='The Knotty Island || Handmade Macrame Decor'>
-			{filterListings.length ? (
-				filterListings.map((list, i) => {
-					return (
-						<ProductCards
-							key={i}
-							description={filterListings[i].description}
-							title={filterListings[i].title}
-							price={filterListings[i].price}
-							listing={filterListings[i].listing_id}
-							cat={cat}
-						/>
-					);
-				})
-			) : (
-				<div></div>
-			)}
+			<h1 className='text-6xl font-title text-center w-full self-center'>
+				{name}
+			</h1>
+			<div className='flex flex-row'>
+				{filterListings.length ? (
+					filterListings.map((list, i) => {
+						return (
+							<ProductCards
+								key={i}
+								description={filterListings[i].description}
+								title={filterListings[i].title}
+								price={filterListings[i].price}
+								listing={filterListings[i].listing_id}
+							/>
+						);
+					})
+				) : (
+					<div></div>
+				)}
+			</div>
 		</Layout>
 	);
 }
@@ -48,5 +52,6 @@ export default categories;
 
 export async function getServerSideProps({ query }) {
 	const category = query.cat;
-	return { props: { category } };
+	const name = query.name;
+	return { props: { category, name } };
 }
