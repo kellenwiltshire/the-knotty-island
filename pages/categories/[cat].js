@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../../components/Layout/Layout';
 import { useDispatch, useSelector } from 'react-redux';
 import { requestStore } from '../../actions';
@@ -33,6 +33,7 @@ function categories({ category }) {
 							title={filterListings[i].title}
 							price={filterListings[i].price}
 							listing={filterListings[i].listing_id}
+							cat={cat}
 						/>
 					);
 				})

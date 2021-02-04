@@ -1,11 +1,11 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
+import Link from 'next/link';
 
-function products({ data, image }) {
+function products({ data, image, category }) {
 	const title = data.results[0].title;
 	const description = data.results[0].description;
 	const price = data.results[0].price;
-	const materials = [data.results[0].materials];
 	const item_width = data.results[0].item_width;
 	const item_length = data.results[0].item_length;
 	const url = data.results[0].url;
@@ -13,6 +13,16 @@ function products({ data, image }) {
 	return (
 		<Layout title={`The Knotty Island || ${title}`}>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 font-body'>
+				<div className='mb-10'>
+					<Link
+						href={{
+							pathname: '/categories/[cat]',
+							query: { cat: category },
+						}}
+					>
+						<a>Back</a>
+					</Link>
+				</div>
 				<div className='flex flex-col md:flex-row -mx-4'>
 					<div className='md:flex-1 px-4 order-2 sm:order-1'>
 						{image.results.map((link, i) => {
@@ -78,13 +88,18 @@ export default products;
 
 export async function getServerSideProps({ query }) {
 	const id = query.id;
+	const category = query.cat;
 	try {
-		const res = await fetch(`http://LOCALHOST:3000/listinginfo/${id}`);
+		const res = await fetch(
+			`https://aqueous-depths-70835.herokuapp.com/listinginfo/${id}`,
+		);
 		const data = await res.json();
-		let resimage = await fetch(`http://LOCALHOST:3000/listingpictures/${id}`);
+		let resimage = await fetch(
+			`https://aqueous-depths-70835.herokuapp.com/listingpictures/${id}`,
+		);
 		let image = await resimage.json();
 		return {
-			props: { data, image },
+			props: { data, image, category },
 		};
 	} catch (error) {
 		console.log(error);

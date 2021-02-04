@@ -7,7 +7,7 @@ function Footer() {
 				<div>
 					<div className='flex flex-row items-center justify-between'>
 						{/* FACEBOOK */}
-						<a href='#'>
+						<a href='https://www.facebook.com/theknottyisland'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								className='icon icon-tabler icon-tabler-brand-facebook'
@@ -25,7 +25,7 @@ function Footer() {
 							</svg>
 						</a>
 						{/* Instagram */}
-						<a href='#'>
+						<a href='https://www.instagram.com/theknottyisland/'>
 							<svg
 								xmlns='http://www.w3.org/2000/svg'
 								className='icon icon-tabler icon-tabler-brand-instagram'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-function ProductCards({ description, title, price, listing }) {
+function ProductCards({ description, title, price, listing, cat }) {
 	const shortTitle = title.split('/', 1);
 	let fixedDescription = description.replace('&#39;', "'");
 	fixedDescription = fixedDescription.replace('t&#39;s', "t's");
@@ -10,7 +10,9 @@ function ProductCards({ description, title, price, listing }) {
 	const [image, setImage] = useState(null);
 
 	useEffect(() => {
-		fetch(`http://LOCALHOST:3000/listingpictures/${listing}`)
+		fetch(
+			`https://aqueous-depths-70835.herokuapp.com/listingpictures/${listing}`,
+		)
 			.then((res) => res.json())
 			.then((data) => setImage(data.results[0].url_fullxfull));
 	});
@@ -33,7 +35,7 @@ function ProductCards({ description, title, price, listing }) {
 					<Link
 						href={{
 							pathname: '/products/[id]',
-							query: { id: listing },
+							query: { id: listing, cat: cat },
 						}}
 					>
 						<a className='text-xs sm:text-base md:text-xl block bg-gray-300 py-2 px-2 text-gray-600 text-center rounded shadow-lg uppercase font-light sm:mt-6 hover:bg-gray-400 hover:text-white duration-300 ease-in-out'>

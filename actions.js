@@ -16,7 +16,7 @@ import {
 export const requestStore = () => async (dispatch) => {
 	dispatch({ type: REQUEST_STORE_PENDING });
 
-	fetch('http://LOCALHOST:3000/store')
+	fetch('https://aqueous-depths-70835.herokuapp.com/store')
 		.then((response) => response.json())
 		.then((data) => dispatch({ type: REQUEST_STORE_SUCCESS, payload: data }))
 		.catch((error) =>
@@ -27,7 +27,7 @@ export const requestStore = () => async (dispatch) => {
 export const requestStatus = () => async (dispatch) => {
 	dispatch({ type: REQUEST_STATUS_PENDING });
 
-	fetch('http://LOCALHOST:3000/status')
+	fetch('https://aqueous-depths-70835.herokuapp.com/status')
 		.then((response) => response.json())
 		.then((data) => dispatch({ type: REQUEST_STATUS_SUCCESS, payload: data }))
 		.catch((error) =>
@@ -38,7 +38,7 @@ export const requestStatus = () => async (dispatch) => {
 export const requestReviews = () => async (dispatch) => {
 	dispatch({ type: REQUEST_REVIEWS_PENDING });
 
-	fetch('http://LOCALHOST:3000/reviews')
+	fetch('https://aqueous-depths-70835.herokuapp.com/reviews')
 		.then((response) => response.json())
 		.then((data) => dispatch({ type: REQUEST_REVIEWS_SUCCESS, payload: data }))
 		.catch((error) =>
@@ -49,7 +49,7 @@ export const requestReviews = () => async (dispatch) => {
 export const requestAbout = () => async (dispatch) => {
 	dispatch({ type: REQUEST_ABOUT_PENDING });
 
-	fetch('http://LOCALHOST:3000/aboutMe')
+	fetch('https://aqueous-depths-70835.herokuapp.com/aboutMe')
 		.then((response) => response.json())
 		.then((data) => dispatch({ type: REQUEST_ABOUT_SUCCESS, payload: data }))
 		.catch((error) =>

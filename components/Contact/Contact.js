@@ -1,29 +1,29 @@
 import React from 'react';
-// import { userID, templateID, serviceID } from '../emailAPI/emailAPI';
-// import emailjs from 'emailjs-com';
+import { userID, templateID, serviceID } from '../../emailAPI/emailAPI';
+import emailjs from 'emailjs-com';
 
 const contact = () => {
-	// function sendEmail(e) {
-	// 	e.preventDefault();
+	function sendEmail(e) {
+		e.preventDefault();
 
-	// 	emailjs.init(userID);
+		emailjs.init(userID);
 
-	// 	if (e.input !== '') {
-	// 		emailjs.sendForm(serviceID, templateID, '#contact').then(
-	// 			(response) => {
-	// 				console.log(response.text);
-	// 			},
-	// 			(error) => {
-	// 				console.log(error.text);
-	// 			},
-	// 		);
-	// 	}
-	// 	showSubmitSuccess();
-	// }
+		if (e.input !== '') {
+			emailjs.sendForm(serviceID, templateID, '#contact').then(
+				(response) => {
+					console.log(response.text);
+				},
+				(error) => {
+					console.log(error.text);
+				},
+			);
+		}
+		showSubmitSuccess();
+	}
 
-	// const showSubmitSuccess = () => {
-	// 	document.getElementById('success').style.visibility = 'visible';
-	// };
+	const showSubmitSuccess = () => {
+		document.getElementById('success').style.visibility = 'visible';
+	};
 	return (
 		<div
 			id='component'
@@ -35,7 +35,7 @@ const contact = () => {
 			<div className='shadow xl:w-full w-11/12'>
 				<div className='md:grid md:grid-cols-1 md:gap-6'>
 					<div className='md:col-span-2'>
-						<form id='contact' onSubmit='#'>
+						<form id='contact' onSubmit={sendEmail}>
 							<div className='shadow overflow-hidden sm:rounded-md font-body'>
 								<div className='px-4 py-5 bg-white sm:p-6'>
 									<div className='grid grid-cols-6 gap-6'>

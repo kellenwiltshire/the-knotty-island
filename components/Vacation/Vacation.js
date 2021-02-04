@@ -6,7 +6,7 @@ function Vacation({ vacationMessage }) {
 			{vacationMessage}
 			<div className='flex flex-row items-center space-x-10'>
 				{/* Facebook */}
-				<a href='#'>
+				<a href='https://www.facebook.com/theknottyisland'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='icon icon-tabler icon-tabler-brand-facebook'
@@ -28,7 +28,7 @@ function Vacation({ vacationMessage }) {
 					<p className='text-3xl text-blue-500'>Etsy</p>
 				</a>
 				{/* Instagram */}
-				<a href='#'>
+				<a href='https://www.instagram.com/theknottyisland/'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						className='icon icon-tabler icon-tabler-brand-instagram'
