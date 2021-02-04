@@ -9,7 +9,7 @@ module.exports = {
 			})
 		},
 		fontFamily: {
-			'title': 'Sacramento',
+			'title': 'Seaweed Script',
 			'body': 'Open Sans'
 		}
 	},

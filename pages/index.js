@@ -39,7 +39,7 @@ export default function Home() {
 				<Splash />
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
-						<div>
+						<div className='m-10'>
 							<h1 className='self-center text-8xl text-center font-title mb-2'>
 								The Knotty Island
 							</h1>
@@ -61,7 +61,7 @@ export default function Home() {
 				<Splash />
 				<div className='container'>
 					<div className='flex flex-row flex-wrap justify-center'>
-						<div>
+						<div className='m-10'>
 							<h1 className='self-center text-5xl sm:text-8xl text-center font-title mb-2'>
 								The Knotty Island
 							</h1>

@@ -4,7 +4,7 @@ import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import Splash from '../Splash/Splash';
 
-function Layout({ title, children, vacation }) {
+function Layout({ title, children }) {
 	return (
 		<div>
 			<Head>
@@ -13,7 +13,7 @@ function Layout({ title, children, vacation }) {
 
 				<link rel='preconnect' href='https://fonts.gstatic.com' />
 				<link
-					href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Sacramento&display=swap'
+					href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Seaweed+Script&display=swap'
 					rel='stylesheet'
 				/>
 			</Head>
