@@ -1,5 +1,5 @@
 import React from 'react';
-import { userID, templateID, serviceID } from '../../emailAPI/emailAPI';
+// import { userID, templateID, serviceID } from '../../emailAPI/emailAPI';
 import emailjs from 'emailjs-com';
 
 const contact = () => {
