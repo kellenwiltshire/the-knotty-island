@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from 'next/Head';
+import Head from 'next/head';
 import Navigation from '../Navigation/Navigation';
 import Footer from '../Footer/Footer';
 import Splash from '../Splash/Splash';
