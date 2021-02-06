@@ -9,7 +9,7 @@ function aboutMe() {
 		<Layout title='The Knotty Island || About Me'>
 			<Splash />
 			<div className='flex flex-col'>
-				<div className='container self-center flex justify-between flex-col'>
+				<div className='container self-center flex flex-col'>
 					<About />
 					<Contact />
 				</div>

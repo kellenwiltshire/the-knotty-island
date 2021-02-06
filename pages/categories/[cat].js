@@ -27,7 +27,7 @@ function categories({ category, name }) {
 			<h1 className='text-6xl font-title text-center w-full self-center'>
 				{name}
 			</h1>
-			<div className='flex flex-row'>
+			<div className='flex flex-row flex-wrap justify-center'>
 				{filterListings.length ? (
 					filterListings.map((list, i) => {
 						return (
@@ -37,6 +37,8 @@ function categories({ category, name }) {
 								title={filterListings[i].title}
 								price={filterListings[i].price}
 								listing={filterListings[i].listing_id}
+								cat={cat}
+								name={name}
 							/>
 						);
 					})

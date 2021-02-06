@@ -5,7 +5,7 @@ function Footer() {
 		<footer className='bg-gray-300 w-full px-4 mx-auto'>
 			<div className='flex flex-col items-center my-4'>
 				<div>
-					<div className='flex flex-row items-center justify-between'>
+					<div className='flex flex-row items-center space-x-8 justify-center'>
 						{/* FACEBOOK */}
 						<a href='https://www.facebook.com/theknottyisland'>
 							<svg
@@ -48,11 +48,17 @@ function Footer() {
 							<p className='text-blue-500'>Etsy</p>
 						</a>
 					</div>
-					<p className='text-xs inline-flex text-gray-400 px-2 pt-6 font-body'>
-						<a href='https://www.kellenwiltshire.com' target='_blank'>
-							Web Development by Kellen Wiltshire
-						</a>
-					</p>
+					<div className='text-xs text-center text-gray-400 px-2 pt-6 font-body'>
+						<p>
+							The term 'Etsy' is a trademark of Etsy, Inc. This application uses
+							the Etsy API but is not endorsed or certified by Etsy, Inc.
+						</p>
+						<p>
+							<a href='https://www.kellenwiltshire.com' target='_blank'>
+								Web Development by Kellen Wiltshire
+							</a>
+						</p>
+					</div>
 				</div>
 			</div>
 		</footer>

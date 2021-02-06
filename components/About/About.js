@@ -21,7 +21,7 @@ function About() {
 	}
 	let fixedStory = story.replace('&#39;', "'");
 	return (
-		<div className='container m-10 px-1 sm:px-6'>
+		<div className='container sm:m-10 px-1 sm:px-6'>
 			<div className='lg:flex justify-between items-center'>
 				<div className='lg:w-6/12 lg:p-0 p-7'>
 					<h1 className='text-3xl sm:text-6xl text-center mb-0 sm:mb-10 font-title'>

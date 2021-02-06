@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import Link from 'next/link';
 
-function products({ data, image, category }) {
+function products({ data, image, category, name }) {
 	const title = data.results[0].title;
 	const description = data.results[0].description;
 	const price = data.results[0].price;
@@ -17,7 +17,7 @@ function products({ data, image, category }) {
 					<Link
 						href={{
 							pathname: '/categories/[cat]',
-							query: { cat: category },
+							query: { cat: category, name: name },
 						}}
 					>
 						<a>Back</a>

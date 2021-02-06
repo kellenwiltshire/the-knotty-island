@@ -18,7 +18,7 @@ function Layout({ title, children }) {
 				/>
 			</Head>
 			<Navigation />
-			<main className='mx-auto pt-16 sm:min-h-screen flex justify-center flex-row flex-wrap'>
+			<main className='mx-auto pt-16 min-h-screen flex justify-center flex-row flex-wrap'>
 				{children}
 			</main>
 			<Footer />
