@@ -24,7 +24,7 @@ function categories({ category, name }) {
 
 	return (
 		<Layout title='The Knotty Island || Handmade Macrame Decor'>
-			<h1 className='text-6xl font-title text-center w-full self-center'>
+			<h1 className='text-6xl font-title text-center w-full self-center mb-5'>
 				{name}
 			</h1>
 			<div className='flex flex-row flex-wrap justify-center'>
