@@ -53,7 +53,7 @@ function Footer() {
 							The term 'Etsy' is a trademark of Etsy, Inc. This application uses
 							the Etsy API but is not endorsed or certified by Etsy, Inc.
 						</p>
-						<p>
+						<p className='m-2'>
 							<a href='https://www.kellenwiltshire.com' target='_blank'>
 								Web Development by Kellen Wiltshire
 							</a>

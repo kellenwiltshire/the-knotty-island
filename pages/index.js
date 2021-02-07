@@ -50,6 +50,26 @@ export default function Home() {
 						<Vacation vacationMessage={vacationMessage} />
 						<About />
 						<Contact />
+						<div className='flex flex-row flex-wrap font-body justify-center m-5'>
+							<h1 className='w-full font-title text-center text-4xl sm:text-6xl mb-5'>
+								Shop In Store
+							</h1>
+							<div className='mx-5'>
+								<a href='https://we-made-it.square.site/' target='_blank'>
+									<p className='text-xl font-bold'>We Made It</p>
+								</a>
+								<p>101 King St</p>
+								<p>Newcastle, Ontario</p>
+							</div>
+							<div className='mx-5'>
+								<a href='https://artisanmadeco.com/' target='_blank'>
+									<p className='text-xl font-bold'>Artisan Made Co.</p>
+								</a>
+								<p>1724 Bath Road</p>
+								<p>Unit 10</p>
+								<p>Kingston, Ontario</p>
+							</div>
+						</div>
 						<Reviews />
 					</div>
 				</div>
@@ -70,6 +90,24 @@ export default function Home() {
 							</h2>
 						</div>
 						<Categories />
+						<div className='flex flex-row flex-wrap font-body justify-center m-5'>
+							<h1 className='w-full font-title text-center text-4xl sm:text-6xl mb-5'>
+								Shop In Store
+							</h1>
+							<div className='mx-5'>
+								<p className='text-xl font-bold'>We Made It</p>
+								<p>101 King St</p>
+								<p>Newcastle, Ontario</p>
+							</div>
+							<div className='mx-5'>
+								<a href='https://artisanmadeco.com/' target='_blank'>
+									<p className='text-xl font-bold'>Artisan Made Co.</p>
+								</a>
+								<p>1724 Bath Road</p>
+								<p>Unit 10</p>
+								<p>Kingston, Ontario</p>
+							</div>
+						</div>
 						<Reviews />
 					</div>
 				</div>

@@ -12,7 +12,7 @@ function Categories() {
 			<Link
 				href={{
 					pathname: '/categories/[cat]',
-					query: { cat: wallhanging_id, name: 'Wallhangings' },
+					query: { cat: wallhanging_id, name: 'Wall Hangings' },
 				}}
 			>
 				<a>
@@ -29,9 +29,9 @@ function Categories() {
 								width={600}
 							/>
 						</div>
-						<div className='p-4 flex flex-col'>
+						<div className='p-4'>
 							<h2 className='text-xs sm:text-base md:text-2xl uppercase text-center'>
-								Wallhangings
+								Wall Hangings
 							</h2>
 						</div>
 					</div>
