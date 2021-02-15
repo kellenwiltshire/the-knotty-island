@@ -10,6 +10,8 @@ function Layout({ title, children }) {
 			<Head>
 				<title>{title}</title>
 				<link rel='icon' href='/favicon.ico' />
+				<meta name='The Knotty Island Handmade Macrame Rebecca Wiltshire Kingston Ontario Canada Etsy' />
+				<meta lang='en' />
 
 				<link rel='preconnect' href='https://fonts.gstatic.com' />
 				<link

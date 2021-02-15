@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://theknottyisland.com
+
+# Sitemaps
+Sitemap: https://theknottyisland.com/sitemap.xml

@@ -55,14 +55,22 @@ export default function Home() {
 								Shop In Store
 							</h1>
 							<div className='mx-5'>
-								<a href='https://www.we-made-it.ca/' target='_blank'>
+								<a
+									href='https://www.we-made-it.ca/'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<p className='text-xl font-bold'>We Made It</p>
 								</a>
 								<p>101 King St</p>
 								<p>Newcastle, Ontario</p>
 							</div>
 							<div className='mx-5'>
-								<a href='https://artisanmadeco.com/' target='_blank'>
+								<a
+									href='https://artisanmadeco.com/'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<p className='text-xl font-bold'>Artisan Made Co.</p>
 								</a>
 								<p>1724 Bath Road</p>
@@ -95,12 +103,22 @@ export default function Home() {
 								Shop In Store
 							</h1>
 							<div className='mx-5'>
-								<p className='text-xl font-bold'>We Made It</p>
+								<a
+									href='https://www.we-made-it.ca/'
+									target='_blank'
+									rel='noreferrer'
+								>
+									<p className='text-xl font-bold'>We Made It</p>
+								</a>
 								<p>101 King St</p>
 								<p>Newcastle, Ontario</p>
 							</div>
 							<div className='mx-5'>
-								<a href='https://artisanmadeco.com/' target='_blank'>
+								<a
+									href='https://artisanmadeco.com/'
+									target='_blank'
+									rel='noreferrer'
+								>
 									<p className='text-xl font-bold'>Artisan Made Co.</p>
 								</a>
 								<p>1724 Bath Road</p>
