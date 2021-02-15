@@ -55,7 +55,7 @@ export default function Home() {
 								Shop In Store
 							</h1>
 							<div className='mx-5'>
-								<a href='https://we-made-it.square.site/' target='_blank'>
+								<a href='https://www.we-made-it.ca/' target='_blank'>
 									<p className='text-xl font-bold'>We Made It</p>
 								</a>
 								<p>101 King St</p>
