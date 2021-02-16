@@ -102,7 +102,7 @@ export default function Home() {
 							<h1 className='w-full font-title text-center text-4xl sm:text-6xl mb-5'>
 								Shop In Store
 							</h1>
-							<div className='mx-5'>
+							<div className='text-center mx-5 my-10 md:my-0'>
 								<a
 									href='https://www.we-made-it.ca/'
 									target='_blank'
@@ -113,7 +113,7 @@ export default function Home() {
 								<p>101 King St</p>
 								<p>Newcastle, Ontario</p>
 							</div>
-							<div className='mx-5'>
+							<div className='text-center mx-5 my-10 md:my-0'>
 								<a
 									href='https://artisanmadeco.com/'
 									target='_blank'

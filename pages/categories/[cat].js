@@ -32,8 +32,8 @@ function categories({ category, name }) {
 						{name}
 					</h1>
 					<p className='font-body mb-20 text-center'>
-						I currently don't have any Wall Hangings for Sale. Please contact me
-						if you would like a something made!
+						{`I currently don't have any ${name} for Sale. Please contact me
+						if you would like something made!`}
 					</p>
 					<div className='container self-center flex flex-col'>
 						<Contact />
