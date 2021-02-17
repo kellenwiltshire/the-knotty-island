@@ -17,21 +17,6 @@ function Layout({ title, children }) {
 					href='https://fonts.googleapis.com/css2?family=Open+Sans&family=Seaweed+Script&display=swap'
 					rel='stylesheet'
 				/>
-				{/* <!-- Global site tag (gtag.js) - Google Analytics --> */}
-				<script
-					async
-					src='https://www.googletagmanager.com/gtag/js?id=G-CPKHYW0W72'
-				></script>
-				<script
-					async
-					dangerouslySetInnerHTML={{
-						__html: `window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'G-CPKHYW0W72');`,
-					}}
-				/>
 			</Head>
 			<Navigation />
 			<main className='mx-auto pt-16 min-h-screen flex justify-center flex-row flex-wrap'>
