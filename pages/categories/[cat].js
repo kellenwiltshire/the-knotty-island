@@ -26,7 +26,7 @@ function categories({ category, name }) {
 
 	if (filterListings.length === 0) {
 		return (
-			<Layout title='The Knotty Island || Handmade Macrame Decor'>
+			<Layout title={`The Knotty Island || ${name}`}>
 				<div className='flex flex-col justify-center space-y-10'>
 					<h1 className='text-6xl font-title text-center w-full self-center mb-20'>
 						{name}
@@ -43,7 +43,7 @@ function categories({ category, name }) {
 		);
 	} else {
 		return (
-			<Layout title='The Knotty Island || Handmade Macrame Decor'>
+			<Layout title={`The Knotty Island || ${name}`}>
 				<h1 className='text-6xl font-title text-center w-full self-center mb-5'>
 					{name}
 				</h1>
