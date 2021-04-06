@@ -2,7 +2,7 @@
 	"name": "the-knotty-island",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "https://kellenwiltshire.github.io/the-knotty-island",
+	"homepage": "https://theknottyisland.com/",
 	"scripts": {
 		"dev": "next dev -p 3001",
 		"build": "next build",
@@ -14,13 +14,13 @@
 		"@tailwindcss/forms": "^0.2.1",
 		"autoprefixer": "^10.2.5",
 		"next": "10.0.5",
-		"next-sitemap": "^1.6.9",
-		"postcss": "^8.2.8",
+		"next-sitemap": "^1.6.20",
+		"postcss": "^8.2.9",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
 		"react-redux": "^7.2.3",
 		"redux": "^4.0.5",
 		"redux-thunk": "^2.3.0",
-		"tailwindcss": "^2.0.4"
+		"tailwindcss": "^2.1.1"
 	}
 }
