@@ -6,8 +6,6 @@ function products({ data, image, category, name }) {
 	const title = data.results[0].title;
 	const description = data.results[0].description;
 	const price = data.results[0].price;
-	const item_width = data.results[0].item_width;
-	const item_length = data.results[0].item_length;
 	const url = data.results[0].url;
 
 	return (
@@ -56,16 +54,6 @@ function products({ data, image, category, name }) {
 						<div className='text-gray-500'>
 							<span className='text-xl font-bold'>Description: </span>{' '}
 							<p className='leading-relaxed'>{description}</p>
-						</div>
-
-						<div>
-							<span className='text-gray-500 text-xl font-bold'>Length: </span>
-							<p className='text-gray-500'>{item_length}mm</p>
-						</div>
-
-						<div>
-							<span className='text-gray-500 text-xl font-bold'>Width: </span>
-							<p className='text-gray-500'>{item_width}mm</p>
 						</div>
 
 						<div className='flex py-4 space-x-4'>
