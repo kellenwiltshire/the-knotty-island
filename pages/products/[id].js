@@ -36,24 +36,19 @@ function products({ data, image, category, name }) {
 						})}
 					</div>
 					<div className='md:flex-1 px-4 order-1 sm:order-2'>
-						<h2 className='mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl'>
-							{title}
-						</h2>
+						<h2 className='mb-2 leading-tight tracking-tight font-bold text-gray-800 text-2xl md:text-3xl'>{title}</h2>
 
 						<div className='flex items-center space-x-4 my-4'>
 							<div>
 								<div className='rounded-lg bg-gray-100 flex py-2 px-3'>
 									<span className='text-indigo-400 mr-1 mt-1'>$</span>
-									<span className='font-bold text-indigo-600 text-3xl'>
-										{price}
-									</span>
+									<span className='font-bold text-indigo-600 text-3xl'>{price}</span>
 								</div>
 							</div>
 						</div>
 
 						<div className='text-gray-500'>
-							<span className='text-xl font-bold'>Description: </span>{' '}
-							<p className='leading-relaxed'>{description}</p>
+							<span className='text-xl font-bold'>Description: </span> <p className='leading-relaxed'>{description}</p>
 						</div>
 
 						<div className='flex py-4 space-x-4'>
@@ -74,20 +69,17 @@ function products({ data, image, category, name }) {
 
 export default products;
 
-export async function getServerSideProps({ query }) {
+export async function getStaticProps({ query }) {
 	const id = query.id;
 	const category = query.cat;
 	try {
-		const res = await fetch(
-			`https://aqueous-depths-70835.herokuapp.com/listinginfo/${id}`,
-		);
+		const res = await fetch(`https://aqueous-depths-70835.herokuapp.com/listinginfo/${id}`);
 		const data = await res.json();
-		let resimage = await fetch(
-			`https://aqueous-depths-70835.herokuapp.com/listingpictures/${id}`,
-		);
+		let resimage = await fetch(`https://aqueous-depths-70835.herokuapp.com/listingpictures/${id}`);
 		let image = await resimage.json();
 		return {
 			props: { data, image, category },
+			revalidate: 3600,
 		};
 	} catch (error) {
 		console.log(error);

@@ -28,9 +28,7 @@ function categories({ category, name }) {
 		return (
 			<Layout title={`The Knotty Island || ${name}`}>
 				<div className='flex flex-col justify-center space-y-10'>
-					<h1 className='text-6xl font-title text-center w-full self-center mb-20'>
-						{name}
-					</h1>
+					<h1 className='text-6xl font-title text-center w-full self-center mb-20'>{name}</h1>
 					<p className='font-body mb-20 text-center'>
 						{`I currently don't have any ${name} for Sale. Please contact me
 						if you would like something made!`}
@@ -44,9 +42,7 @@ function categories({ category, name }) {
 	} else {
 		return (
 			<Layout title={`The Knotty Island || ${name}`}>
-				<h1 className='text-6xl font-title text-center w-full self-center mb-5'>
-					{name}
-				</h1>
+				<h1 className='text-6xl font-title text-center w-full self-center mb-5'>{name}</h1>
 				<div className='flex flex-row flex-wrap justify-center'>
 					{filterListings.length ? (
 						filterListings.map((list, i) => {
