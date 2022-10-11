@@ -27,6 +27,6 @@ The API has a limit on requests that can be made per limit, but the limit seems 
   
 ## Appendix
 
-https://theknottyisland.com
+This site is no longer online
 
   
